@@ -80,6 +80,8 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 3. Watch to see the htop graphs fill up for RAM as the miner begins its work. In xmrig you will see that hash pages are at 100%, and you should see a good 20 to 40 percent increase in your hash.
 4. Watch htop and you'll see the swap file filling up over time... meaning, your system should be more stable!
 
+Note: Watch for a bit, and if you get a `Segmentation fault (core dumped)` error, resubmit your mining command and it should continue fine. 
+
 ## Closing Remarks
 I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex. If you enjoyed this tutorial and need a VPS provider to expand to, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588 My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
 
