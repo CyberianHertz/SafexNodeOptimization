@@ -66,7 +66,7 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 				<br/>Node 0 HugePages_Total:     0
 				<br/>Node 0 HugePages_Free:      0
 				<br/>Node 0 HugePages_Surp:      0
-4. At the shell, enter `sudo sysctl -w vm.nr_hugepages=4096` to setup 4GB huge files. This allocates 4GB of RAM in a chunk. Its all or nothing now RAM-wise, and without the swap file you could experience degraded performance or an unresponsive system. Watch your htop pane to see the CPU in action and the swap file to appear.
+4. At the shell, enter `sudo sysctl -w vm.nr_hugepages=4096` to setup 4GB huge pages. This allocates 4GB of RAM in a chunk. Its all or nothing now RAM-wise, and without the swap file you could experience degraded performance or an unresponsive system. Watch your htop pane to see the CPU in action and the swap file to appear.
 	For larger or smaller allocations, refer to:
 	https://medium.com/@tomas_savenas/30-increase-in-cpu-mining-hash-rate-by-enabling-huge-pages-8af5eedb7d62
 	and
