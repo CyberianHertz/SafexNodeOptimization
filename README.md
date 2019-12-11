@@ -56,6 +56,8 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 6. Now type `chmod u+x makeSwap.sh` at the shell promt and hit **ENTER** to make *makeSwap.sh* executable.
 7. Execute it and make your swap file by typing `./makeSwap.sh` and hitting **ENTER**. Watch htop and you'll see the CPU usage rise for a moment and the 4GB of swap space appear under the RAM graph.
 
+Read more about creating a swap file at: https://coinguides.org/creating-swap-file/
+
 ## Setup huge pages
 1. Stop your mining software (type `exit` and press enter for safexd or `CTRL + C` for xmrig). Watch htop graphs before and after doing it so you know how the graphs work. 
 2. Type `cd ~` and press **ENTER** to enter your home directory (I do this as a best practice to avoid putting something somewhere I didn't mean to and losing it later).
@@ -87,6 +89,7 @@ I am providing this as a goodwill gesture to the community in an effort to bring
 
 ## Reference Links
 https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+<br/>https://coinguides.org/creating-swap-file/
 <br/>https://medium.com/@tomas_savenas/30-increase-in-cpu-mining-hash-rate-by-enabling-huge-pages-8af5eedb7d62
 <br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html
 <br/>https://www.vultr.com/?ref=8343588
