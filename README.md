@@ -17,8 +17,8 @@ Now, before proceeding, exit your miner by typing status and hitting enter (for 
 ## Getting setup to survive a disconnect
 Connect to your VM via ssh (I use Remina on Linux)
 1. Log into your VM and at the prompt type `tmux` and press enter. This creates a session that will continue running so you can you can disconnect from it.
-2. To disconnect from the tmux, hold CTRL and press b then release. This sequence puts you in tmux command mode. Note: you won't see any change in tmux command mode.
-3. Now that you are in tmux command mode, hold down SHIFT and press & to exit the tmux session and be dropped back into your shell.
+2. To disconnect from the tmux, **hold CTRL and press b** then release. This sequence puts you in tmux command mode. Note: you won't see any change in tmux command mode.
+3. Now that you are in tmux command mode, **hold down SHIFT and press &** to exit the tmux session and be dropped back into your shell.
 4. To renter the running tmux session, type `tmux attach -t 0` and you be where you started.
 	1. Its always good to start everything in tmux to avoid loss of work in case your internet connection drops out. Without tmux, all jobs initiated at the shell will be lost upon network connection close.
 	2. You can read more about working with tmux at https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
@@ -52,13 +52,13 @@ swapon /swapfile
 sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 ## end
 ```
-5. Once pasted, press *CTRL+X* to exit Nano edit mode, press *y* to save, and hit *ENTER* to save the code to the file makeSwap.sh and be dropped back to the shell prompt.
-6. Now type `chmod u+x makeSwap.sh` at the shell promt and hit enter to make makeSwap.sh executable.
-7. Execute it and make your swap file by typing `./makeSwap.sh` and hitting *ENTER*. Watch htop and you'll see the CPU usage rise for a moment and the 4GB of swap space appear under the RAM graph.
+5. Once pasted, press **CTRL+X** to exit Nano edit mode, press **y** to save, and hit **ENTER** to save the code to the file *makeSwap.sh* and be dropped back to the shell prompt.
+6. Now type `chmod u+x makeSwap.sh` at the shell promt and hit **ENTER** to make *makeSwap.sh* executable.
+7. Execute it and make your swap file by typing `./makeSwap.sh` and hitting **ENTER**. Watch htop and you'll see the CPU usage rise for a moment and the 4GB of swap space appear under the RAM graph.
 
 ## Setup huge pages
 1. Stop your mining software (type `exit` and press enter for safexd or `CTRL + C` for xmrig). Watch htop graphs before and after doing it so you know how the graphs work. 
-2. Type `cd ~` and press *ENTER* to enter your home directory (I do this as a best practice to avoid putting something somewhere I didn't mean to and losing it later).
+2. Type `cd ~` and press **ENTER** to enter your home directory (I do this as a best practice to avoid putting something somewhere I didn't mean to and losing it later).
 3. Check to see if huge pages exist by entering `cat /sys/devices/system/node/node*/meminfo | fgrep Huge`
 	1. If huge pages aren't present, you'll see something like below and will need to continue to step 4.
 				Node 0 AnonHugePages:         0 kB
@@ -66,7 +66,7 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 				Node 0 HugePages_Total:     0
 				Node 0 HugePages_Free:      0
 				Node 0 HugePages_Surp:      0
-4. At the shell, enter `sudo sysctl -w vm.nr_hugepages=4096` to setup 4GB huge files. This allocates 4GB of RAM in a chunk. Its all or nothing now RAM-wise. Watch your htop pane to see the CPU in action and the swap file to appear.
+4. At the shell, enter `sudo sysctl -w vm.nr_hugepages=4096` to setup 4GB huge files. This allocates 4GB of RAM in a chunk. Its all or nothing now RAM-wise, and without the swap file you could experience degraded performance or an unresponsive system. Watch your htop pane to see the CPU in action and the swap file to appear.
 	For larger or smaller allocations, refer to:
 	https://medium.com/@tomas_savenas/30-increase-in-cpu-mining-hash-rate-by-enabling-huge-pages-8af5eedb7d62
 	and
@@ -83,7 +83,7 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 Note: Watch for a bit, and if you get a `Segmentation fault (core dumped)` error, resubmit your mining command and it should continue fine. 
 
 ## Closing Remarks
-I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex. If you enjoyed this tutorial and need a VPS provider to expand to, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588 My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
+I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex by increasing the hash of connected miners. If you enjoyed this tutorial and need a VPS provider to expand your efforts with, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588 My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
 
 
 
