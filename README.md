@@ -18,7 +18,7 @@ Now, before proceeding, exit your miner by typing status and hitting enter (for 
 Connect to your VM via ssh (I use Remina on Linux)
 1. Log into your VM and at the prompt type `tmux` and press enter. This creates a session that will continue running so you can you can disconnect from it.
 2. To disconnect from the tmux, **hold CTRL and press b** then release. This sequence puts you in tmux command mode. Note: you won't see any change in tmux command mode.
-3. Now that you are in tmux command mode, **hold down SHIFT and press &** to exit the tmux session and be dropped back into your shell.
+3. Now that you are in tmux command mode, **hold down SHIFT and press d** to close the tmux session and be dropped back into your shell.
 4. To renter the running tmux session, type `tmux attach -t 0` and you be where you started.
 	1. Its always good to start everything in tmux to avoid loss of work in case your internet connection drops out. Without tmux, all jobs initiated at the shell will be lost upon network connection close.
 	2. You can read more about working with tmux at https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
