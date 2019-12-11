@@ -1,7 +1,7 @@
 # SafexNodeOptimization
 Tutourial to get the most out of your Safex mining machine
 
-**How I squeezed blood from a stone, or, "overclocking your virtual machine for fun... and hopefully profit"**
+**How I squeezed blood from a stone, or, "overclocking your virtual machine for fun... and hopefully profit!**
 
 **Synopsis**: Get more hashrate out of your Safex mining rig!
 
@@ -11,17 +11,17 @@ Tutourial to get the most out of your Safex mining machine
 		
 **Tutourial Note**: I am being extra verbose here to give Linux newbies a chance to learn and understand what they are doing along the way, *and I thank seasoned Linux users for coping with the long-windedness.* Ok, here we go!
 
-Before starting, and before exiting your miner (if it is running), take note of your hashrate by typing status and hitting enter (for safexd) or pressing h (in xmrig) to compare it to the hash after these changes.
+Before starting, and before exiting your miner (if it is running), take note of your hashrate by typing status and hitting enter (for safexd) or pressing h (in xmrig) to compare it to the hash you get after making these changes.
 Now, before proceeding, exit your miner by typing status and hitting enter (for safexd) or pressing h (in xmrig).
 
 ## Getting setup to survive a disconnect
 Connect to your VM via ssh (I use Remina on Linux)
 1. Log into your VM and at the prompt type tmux and press enter. This creates a session that will continue running so you can you can disconnect from it.
 2. To disconnect from the tmux, hold CTRL and press b then release. This sequence puts you in tmux command mode. Note: you won't see any change in tmux command mode.
-3a. Now that you are in tmux command mode, hold down SHIFT and press & to exit the tmux session and be dropped back into your shell.
+3. Now that you are in tmux command mode, hold down SHIFT and press & to exit the tmux session and be dropped back into your shell.
 4. To renter the running tmux session, type tmux attach -t 0 and you be where you started.
-4a. Its always good to start everything in tmux to avoid loss of work in case your internet connection drops out. Without tmux, all jobs initiated at the shell will be lost upon network connection close.
-4b. You can read more about working with tmux at https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+	1. Its always good to start everything in tmux to avoid loss of work in case your internet connection drops out. Without tmux, all jobs initiated at the shell will be lost upon network connection close.
+	2. You can read more about working with tmux at https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 
 ## Configure tmux with two panes for ultimate perfomance visibility
 1. Now in tmux at a shell promt, find your safexd or xmrig and run it like you normally would.
@@ -60,7 +60,7 @@ sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 1. Stop your mining software (type and press exit for safexd or CTRL + C for xmrig). Watch htop graphs before and after doing it so you know how the graphs work. 
 2. Type cd ~ and press enter to enter your home directory (I do this as a best practice to avoid putting something somewhere I didn't mean to and losing it later).
 3. Check to see if huge pages exist by entering: cat /sys/devices/system/node/node*/meminfo | fgrep Huge
-3a. If huge pages aren't present, you'll see something like below and will need to continue to step 4.
+	1. If huge pages aren't present, you'll see something like below and will need to continue to step 4.
 				Node 0 AnonHugePages:         0 kB
 				Node 0 ShmemHugePages:        0 kB
 				Node 0 HugePages_Total:     0
