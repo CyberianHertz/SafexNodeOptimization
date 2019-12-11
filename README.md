@@ -36,7 +36,7 @@ Connect to your VM via ssh (I use Remina on Linux)
 This will extend a defined area of the machine's hard drive to act as RAM. Since I am running only 4GB of RAM and want to turn on 4GB huge pages in the next step, I want to make sure the system doesn't crap out when the miner steals all the RAM. The easiest way to do this is by creating a shell script, authorizing it to execute, and executing it. Lets do it!
 1. Go home by entering `cd ~` at the shell prompt.
 2. Create a directory for scripts and switch to it by entering `mkdir scripts && cd scripts` at the shell prompt
-3. Create the makeSwap script by entering `makeSwap.sh` at the shell prompt, which will open a blank Nano editor.
+3. Create the makeSwap script by entering `nano makeSwap.sh` at the shell prompt, which will open a blank Nano editor.
 4. Copy the 11 lines of code below and paste it into Nano (probably via CTRL+SHIFT+V or right-click paste):
 ```
 #!/bin/bash
