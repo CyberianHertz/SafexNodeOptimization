@@ -1,7 +1,7 @@
 # SafexNodeOptimization
 Tutourial to get the most out of your Safex mining machine
 
-**How I squeezed blood from a stone, or, "overclocking your virtual machine for fun... and hopefully profit!**
+**How I squeezed blood from a stone, or, "overclocking your virtual machine for fun... and hopefully profit!"**
 
 **Synopsis**: Get more hashrate out of your Safex mining rig!
 
