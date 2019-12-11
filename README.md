@@ -85,8 +85,9 @@ Note: Watch for a bit, and if you get a `Segmentation fault (core dumped)` error
 ## Closing Remarks
 I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex by increasing the hash of connected miners. If you enjoyed this tutorial and need a VPS provider to expand your efforts with, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588 My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
 
-## References
+## Reference Links
 https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 <br/>https://medium.com/@tomas_savenas/30-increase-in-cpu-mining-hash-rate-by-enabling-huge-pages-8af5eedb7d62
 <br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html
 <br/>https://www.vultr.com/?ref=8343588
+<br/>https://pool.safexnews.net/
