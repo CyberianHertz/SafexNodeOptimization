@@ -95,3 +95,9 @@ https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 <br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html
 <br/>https://www.vultr.com/?ref=8343588
 <br/>https://pool.safexnews.net/
+
+## Update
+Just saw this upgraded referal offer in my Vultr account where you can get $50 with my link! My appologies to anyone who signed up already and didn't get the credit... I didn't know about this offer when I wrote the tutorial :( As the image says though, its for a limited time but I don't know for how long.
+<br/>https://www.vultr.com/?ref=8344540-4F
+<br/>
+![alt text](https://raw.githubusercontent.com/CyberianHertz/SafexNodeOptimization/master/VultrAffiliateOffer.png)
