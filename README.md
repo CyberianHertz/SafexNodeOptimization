@@ -12,7 +12,7 @@ Tutourial to get the most out of your Safex mining machine
 **Tutourial Note**: I am being extra verbose here to give Linux newbies a chance to learn and understand what they are doing along the way, *and I thank seasoned Linux users for coping with the long-windedness.* Ok, here we go!
 
 Before starting, and before exiting your miner (if it is running), take note of your hashrate by typing status and hitting enter (for safexd) or pressing h (in xmrig) to compare it to the hash you get after making these changes.
-Now, before proceeding, exit your miner by typing status and hitting enter (for safexd) or pressing h (in xmrig).
+Now, before proceeding, exit your miner by typing `stop_mining` and hitting `<ENTER>` (for safexd) or pressing `<CTRL+C>` (in xmrig).
 
 ## Getting setup to survive a disconnect
 Connect to your VM via ssh (I use Remina on Linux)
@@ -79,8 +79,9 @@ Read more about creating a swap file at: https://coinguides.org/creating-swap-fi
 ## Test it!
 1. If you followed along, you are ssh'd into your VM and have two tmux panes open, one with a shell promp and the other with htop.
 2. Navigate to your mining software (safexd or xmrig) and start it as you normally would.
-3. Watch to see the htop graphs fill up for RAM as the miner begins its work. In xmrig you will see that hash pages are at 100%, and you should see a good 20 to 40 percent increase in your hash.
-4. Watch htop and you'll see the swap file filling up over time... meaning, your system should be more stable!
+3. Check the performance of your miner by typing `status` and hitting `<ENTER>` (for safexd) or pressing the h key (in xmrig).
+4. Watch to see the htop graphs fill up for RAM as the miner begins its work. In xmrig you will see that hash pages are at 100%, and you should see a good 20 to 40 percent increase in your hash.
+5. Watch htop and you'll see the swap file filling up over time... meaning, your system should be more stable!
 
 Note: Watch for a bit, and if you get a `Segmentation fault (core dumped)` error, resubmit your mining command and it should continue fine. 
 
