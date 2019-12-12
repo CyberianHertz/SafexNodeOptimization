@@ -110,3 +110,7 @@ I have talked with two Safex Discord users who followed my guide and they report
 <br/>
 <br/>
 ![alt text](https://raw.githubusercontent.com/CyberianHertz/SafexNodeOptimization/master/VultrAffiliateOffer.png)
+
+## ToDo
+Test further with the suggestions at:
+<br/>https://www.reddit.com/r/MoneroMining/comments/e94ljc/xmrig_520_1gb_huge_pages_automatic_huge_pages_and/
