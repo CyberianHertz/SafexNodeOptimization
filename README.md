@@ -80,24 +80,29 @@ Read more about creating a swap file at: https://coinguides.org/creating-swap-fi
 1. If you followed along, you are ssh'd into your VM and have two tmux panes open, one with a shell promp and the other with htop.
 2. Navigate to your mining software (safexd or xmrig) and start it as you normally would.
 3. Check the performance of your miner by typing `status` and hitting `<ENTER>` (for safexd) or pressing the h key (in xmrig).
-4. Watch to see the htop graphs fill up for RAM as the miner begins its work. In xmrig you will see that hash pages are at 100%, and you should see a good 20 to 40 percent increase in your hash.
-5. Watch htop and you'll see the swap file filling up over time... meaning, your system should be more stable!
-
+4. Watch to see the htop graphs fill up for RAM as the miner begins its work. In xmrig you will see that hash pages are at 100%, and you should see a good 20 to 40 percent increase in your hash compared to before making these changes.
+5. Watch htop and you'll see the swap file filling up over time... meaning, your system should be more stable as your RAM usage nears max!
+<br/>
 Note: Watch for a bit, and if you get a `Segmentation fault (core dumped)` error, resubmit your mining command and it should continue fine. 
 
 ## Closing Remarks
-I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex by increasing the hash of connected miners. If you enjoyed this tutorial and need a VPS provider to expand your efforts with, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588 My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
+I am providing this as a goodwill gesture to the community in an effort to bring positive network performance to Safex by increasing the hash of connected miners. If you enjoyed this tutorial and need a VPS provider to expand your efforts with, I recommend and use Vultr which you can sign up with my referal code at https://www.vultr.com/?ref=8343588-4F My current setup consists of the $24/month 2 vCPU with 4GB of RAM and 128GB SSD instances either solo mining with safexd 5.0.0 or pool mining to https://pool.safexnews.net/ with xmrig. Following the above I am able to get between 700H/s and 1.3kH/s. I cannot guarantee the same results to you due to geographical data center and other variances. All that said, VPS mining is tricky, and you really have to watch your profit vs cost basis carefully in addition to supply and demand to avoid losing real fiat. I hope this worked for you and improved your speed! Cheers! -- Cyberian
 
 ## Reference Links
 https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 <br/>https://coinguides.org/creating-swap-file/
 <br/>https://medium.com/@tomas_savenas/30-increase-in-cpu-mining-hash-rate-by-enabling-huge-pages-8af5eedb7d62
 <br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html
-<br/>https://www.vultr.com/?ref=8343588
+<br/>https://www.vultr.com/?ref=8343588-4F
 <br/>https://pool.safexnews.net/
 
 ## Update
-Just saw this upgraded referal offer in my Vultr account where you can get $50 with my link! My appologies to anyone who signed up already and didn't get the credit... I didn't know about this offer when I wrote the tutorial :( As the image says though, its for a limited time but I don't know for how long.
+I have talked with two Safex Discord users who followed my guide and they reported at least 20% increased hash rate! I wrote this for semi-constrained virtual machines and so far its working. Might not help outside of this edge-case, but the theory of it all should improve any machine provided huge pages and swap file isn't set up.
+<br/>
+<br/>Also, I just now (12 Dec 2019) saw an upgraded referal offer in my Vultr account where you can get $50 credit with Vultr by using my link! Screenshot taken from my account, and I don't know any more details than what is listed below. My appologies to anyone who signed up already and didn't get the credit... I didn't know about this offer when I wrote the tutorial :( As the image says though, its for a limited time but I don't know for how long.
+<br/>
+<br/>
 <br/>https://www.vultr.com/?ref=8344540-4F
+<br/>
 <br/>
 ![alt text](https://raw.githubusercontent.com/CyberianHertz/SafexNodeOptimization/master/VultrAffiliateOffer.png)
