@@ -75,6 +75,9 @@ Read more about creating a swap file at: https://coinguides.org/creating-swap-fi
 	<br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html	
 5. Now we want to write the huge pages change to the system so they survive a reboot. At the shell prompt, enter `sudo bash -c "echo vm.nr_hugepages=4096 >> /etc/sysctl.conf"`
 6. Check that the huge pages were activated by checking again with `cat /sys/devices/system/node/node*/meminfo | fgrep Huge`
+<br/>
+
+Some further reading on huge pages and memory requirements: https://xmrig.com/docs/miner/randomx-optimization-guide
 
 ## Test it!
 1. If you followed along, you are ssh'd into your VM and have two tmux panes open, one with a shell promp and the other with htop.
@@ -95,6 +98,7 @@ https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 <br/>https://www.kernel.org/doc/html/latest/admin-guide/mm/hugetlbpage.html
 <br/>https://www.vultr.com/?ref=8343588-4F
 <br/>https://pool.safexnews.net/
+<br/>https://xmrig.com/docs/miner/randomx-optimization-guide
 
 ## Update
 I have talked with two Safex Discord users who followed my guide and they reported at least 20% increased hash rate! I wrote this for semi-constrained virtual machines and so far its working. Might not help outside of this edge-case, but the theory of it all should improve any machine provided huge pages and swap file isn't set up.
